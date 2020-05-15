@@ -1,0 +1,120 @@
+﻿.pad-l-0{
+padding-left:0px !important;
+}
+
+.pad-r-0 {
+    padding-right: 0px !important;
+}
+
+.width-100{
+    width:100% !important;
+}
+
+.fieldset {
+    position: absolute;
+    background: white;
+    margin-top: -18px;
+    padding: 5px;
+    font-size:1em;
+}
+
+.mar-top{
+   margin-top:20px;
+}
+
+.box-border {
+    border: 1px solid #e8e8e8;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    float: left;
+    /*margin: 0 5px 20px 5px;*/
+    /*width: 49%;*/
+}
+
+.socialShare {
+   
+}
+
+    .socialShare > ul {
+        list-style: none;
+        padding: 21px 0;
+        height: 60px;
+    }
+    .socialShare > ul > li {
+        float: left;
+        padding: 0px 10px;
+    }
+
+        .socialShare > ul > li > a > img {
+            width: 3vw;
+        }
+
+.addressBox
+{
+   
+}
+    .addressBox > ul {
+        list-style: none;
+        margin: 15px 0 0 0;
+        padding: 0;
+    }
+
+        .addressBox > ul > li > i {
+            padding-right: 10px;
+            font-size: 21px;
+            color: brown;
+        }
+
+/*@media only screen and (max-width: 768px) {
+    .box-border {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .box-border {
+        width: 100%;
+    }
+}*/
+
+.app-moto {
+    border-top: 1px solid #fffb76;
+    width: 100%;
+    padding: 12px 0;
+    float: left;
+}
+
+.app-moto >ul{
+    list-style:none;
+    padding:0px;
+
+}
+
+    .app-moto > ul > li {
+        float: left;
+        width: 20%;
+        text-align:center;
+    }
+
+        .app-moto > ul > li > p {
+            font-size: 16px;
+            color: #e25311;
+        }
+    .app-moto > ul > li>img{
+        width:60px;
+    }
+
+.container
+{
+    margin-top:13px;
+}
+
+#contactDescription > p {
+    margin: 0 0 3px 0;
+    padding: 0 0 0px 0px;
+}
+
+.g-recaptcha {
+    float: right;
+    margin-bottom: 10px;
+}

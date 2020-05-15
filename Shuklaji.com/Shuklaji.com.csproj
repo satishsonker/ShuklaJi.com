@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="jQuery-vsdoc" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Primitives" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="MimeKit" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+    <PackageReference Include="popper.js" Version="1.14.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Registration\Data\" />
+    <Folder Include="Areas\Registration\Models\" />
+    <Folder Include="Areas\Web\Data\" />
+    <Folder Include="Areas\Web\Models\" />
+    <Folder Include="wwwroot\css\Area\Common\Dashboard\" />
+    <Folder Include="wwwroot\fonts\" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="BusinessLayer">
+      <HintPath>..\BusinessLayer\bin\Debug\netcoreapp2.2\BusinessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="DataManager">
+      <HintPath>..\DataManager\bin\Debug\netcoreapp2.2\DataManager.dll</HintPath>
+    </Reference>
+    <Reference Include="ModelLayer">
+      <HintPath>..\ModelLayer\bin\Debug\netcoreapp2.2\ModelLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Utility">
+      <HintPath>..\Utility\bin\Debug\netcoreapp2.2\Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

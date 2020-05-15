@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewData["Title"] = "User Feedback";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/js/Area/Admin/ContactManagement/UserFeedback.js"></script>
+<div class="breadcrumb-data-1">
+    <div class="row">
+        <div class="col-md-6 col-5">
+            <div class="breadcrumb-data-3">
+                <h3>User Feedback</h3>
+            </div>
+        </div>
+        <div class="col-md-6 col-7">
+            <div class="breadcrumb-data-2 d-none d-sm-block">
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><span>/</span></li>
+                    <li><a>Contact US</a></li>
+                    <li><span>/</span></li>
+                    <li><a>User Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data-container">
+    <div class="inner-container">
+        <form id="frmAddDowntime" class="scroll-form">
+            <div id="gridContainer"></div>
+        </form>
+    </div>
+</div>
+
+<div class="model-form">
+    <div class="form-container">
+        <div class="header">
+            <span class="form-title">Add User Feedback</span>
+            <span class="form-close"><i class="fas fa-times text-danger"></i></span>
+        </div>
+        <div class="form-body">
+            <form id="frmAddUserfeedback" data-id="0">
+                <div class="form">
+                    <div class="offset-md-2 offset-sm-1 offset-lg-2 col-lg-8 col-md-8 col-sm-10">
+                        <div class="custom-form">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="" id="imgLogo" style="width:100px;height:100px;" />
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="dx-fieldset">
+                                        <div class="dx-field">
+                                            <div id="fileuploader-container">
+                                                <div id="file-uploader"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-fieldset">
+                                <div class="dx-field">
+                                    <div class="dx-field-label">Username <i class="fas fa-question"></i><div class="help-data">Name of user who has given the feedback</div></div>
+                                    <div class="dx-field-value">
+                                        <div id="txtUsername"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-fieldset">
+                                <div class="dx-field">
+                                    <div class="dx-field-label">Source<i class="fas fa-question"></i><div class="help-data">Source of the feedback i.e. Facebook, Google, Playstore etc. </div></div>
+                                    <div class="dx-field-value">
+                                        <div id="txtSource"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-fieldset">
+                                <div class="dx-field">
+                                    <div class="dx-field-label">Feedback</div>
+                                    <div class="dx-field-value">
+                                        <div id="txtFeedback"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-fieldset">
+                                <div class="dx-field">
+                                    <div class="dx-field-label"></div>
+                                    <div class="dx-field-value">
+                                        <div id="btnSave"></div>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    .dx-fileuploader-files-container
+    {
+        padding:0px !important;
+    }
+
+    #fileuploader-container
+    {
+        margin-top:0px !important;
+        margin-right:0px !important;
+    }
+
+    .dx-fileuploader-input-wrapper
+    {
+        padding:0px !important;
+    }
+
+   .form-container {
+    width: 80%;
+    min-height: 300px;
+    max-height: 80%;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    border: 1px solid white;
+    background-color: white;
+    opacity: 1;
+    border-radius: 4px;
+}
+</style>
+
+
+

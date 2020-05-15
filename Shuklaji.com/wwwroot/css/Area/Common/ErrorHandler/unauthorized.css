@@ -1,0 +1,55 @@
+﻿.msg-container {
+    border: 1px solid #80808085;
+    width: 50%;
+    position: absolute;
+    margin-top: 15%;
+    min-height: 38%;
+    margin-left: 25%;
+    border-radius: 4px;
+    box-shadow: 4px 4px 12px #80808038;
+    padding: 20px;
+}
+
+.msg-container-icon {
+    text-align: center;
+    float: left;
+    width: 26%;
+    height: 89%;
+    position: absolute;
+    padding: 8px;
+}
+    .msg-container-icon > img {
+        width: 84%;
+        height: 66%;
+        position: absolute;
+        left: 6px;
+        top: 19%;
+    }
+
+.msg-container-msg {
+    text-align: center;
+    color: red;
+    padding: 10px;
+    font-size: 2vw;
+    float: right;
+    width: 75%;
+}
+
+.msg-container-code {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 900;
+    padding: 8px;
+    float: right;
+    width: 75%;
+}
+
+.msg-container-login {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 900;
+    padding: 8px;
+    float: right;
+    width: 75%;
+}
+

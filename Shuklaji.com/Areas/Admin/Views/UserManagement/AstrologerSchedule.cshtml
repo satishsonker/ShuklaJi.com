@@ -1,0 +1,214 @@
+﻿
+@{
+    ViewData["Title"] = "Astrologer Schedule";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/css/Area/Admin/UserManagement/Astrologers.css" rel="stylesheet" />
+<script src="~/js/Area/Admin/UserManagement/AstroSchedule.js"></script>
+<div class="breadcrumb-data-1">
+    <div class="row">
+        <div class="col-md-6 col-5">
+            <div class="breadcrumb-data-3">
+                <h3 _ngcontent-hai-c46="">Astrologer Schedule</h3>
+            </div>
+        </div>
+        <div class="col-md-6 col-7">
+            <div class="breadcrumb-data-2 d-none d-sm-block">
+                <ul>
+                    <li><p>Home</p></li>
+                    <li><span>/</span></li>
+                    <li><a href="/admin/UserManagement/UserList">User Management</a></li>
+                    <li><span>/</span></li>
+                    <li><a href="/admin/UserManagement/Astrologers">Astrologers</a></li>
+                    <li><span>/</span></li>
+                    <li><p>Astrologer Schedule</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data-container">
+    <div class="inner-container">
+        <form id="frmAddAstrologers">
+            <div class="container">
+                <div class="section">Photo</div>
+                <div class="row">
+                    <div class="col-lg">
+                        <ul class="schedule-list">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-12"><input class="chk" value="sun" type="checkbox" /><label class="ckLbl">Sunday</label></div>
+                                    <div class="col-md-7 col-sm-12">
+                                        <div class="showtime sun">
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <div id="sunFrom" class="timectrl"></div><div class="timectrl-action">
+                                                        <i class="fas fa-minus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="timectrl" id="sunTo"></div>
+                                                    <div class="timectrl-action">
+                                                        <i data-key="sun" class="fas fa-plus text-success"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12" data-key="sun"><span  class="scheContainer">9:00 AM-5:00 PM <i data-key="tue" class="fas fa-times text-danger"></i></span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-12"><input class="chk" value="mon" type="checkbox" /><label class="ckLbl">Monday</label></div>
+                                    <div class="col-md-7 col-sm-12">
+                                        <div class="showtime mon">
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <div id="monFrom" class="timectrl"></div><div class="timectrl-action">
+                                                        <i class="fas fa-minus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="timectrl" id="monTo"></div>
+                                                    <div class="timectrl-action">
+                                                        <i data-key="mon" class="fas fa-plus text-success"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12" data-key="mon"><span style="float: right;">9:00 AM-5:00 PM <i data-key="tue" class="fas fa-times text-danger"></i></span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-12"><input class="chk" value="tue" type="checkbox" /><label class="ckLbl">Tuesday</label></div>
+                                    <div class="col-md-7 col-sm-12">
+                                        <div class="showtime tue">
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <div id="tueFrom" class="timectrl"></div><div class="timectrl-action">
+                                                        <i class="fas fa-minus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="timectrl" id="tueTo"></div>
+                                                    <div class="timectrl-action">
+                                                        <i data-key="tue" class="fas fa-plus text-success"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12" data-key="tue"><span style="float: right;">9:00 AM-5:00 PM <i data-key="tue" class="fas fa-times text-danger"></i></span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-12"><input class="chk" value="wed" type="checkbox" /><label class="ckLbl">Wednesday</label></div>
+                                    <div class="col-md-7 col-sm-12">
+                                        <div class="showtime wed">
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <div id="wedFrom" class="timectrl"></div><div class="timectrl-action">
+                                                        <i class="fas fa-minus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="timectrl" id="wedTo"></div>
+                                                    <div class="timectrl-action">
+                                                        <i data-key="wed" class="fas fa-plus text-success"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12" data-key="wed"><span style="float: right;">9:00 AM-5:00 PM <i data-key="tue" class="fas fa-times text-danger"></i></span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-12"><input class="chk" value="thu" type="checkbox" /><label class="ckLbl">Thursday</label></div>
+                                    <div class="col-md-7 col-sm-12">
+                                        <div class="showtime thu">
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <div id="thuFrom" class="timectrl"></div><div class="timectrl-action">
+                                                        <i class="fas fa-minus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="timectrl" id="thuTo"></div>
+                                                    <div class="timectrl-action">
+                                                        <i data-key="thu" class="fas fa-plus text-success"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12" data-key="thu"><span style="float: right;">9:00 AM-5:00 PM <i data-key="tue" class="fas fa-times text-danger"></i></span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-12"><input class="chk" value="fri" type="checkbox" /><label class="ckLbl">Friday</label></div>
+                                    <div class="col-md-7 col-sm-12">
+                                        <div class="showtime fri">
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <div id="friFrom" class="timectrl"></div><div class="timectrl-action">
+                                                        <i class="fas fa-minus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="timectrl" id="friTo"></div>
+                                                    <div class="timectrl-action">
+                                                        <i data-key="fri" class="fas fa-plus text-success"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12" data-key="fri"><span style="float: right;">9:00 AM-5:00 PM <i data-key="tue" class="fas fa-times text-danger"></i></span></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-12"><input class="chk" value="sat" type="checkbox" /><label class="ckLbl">Saturday</label></div>
+                                    <div class="col-md-7 col-sm-12">
+                                        <div class="showtime sat">
+                                            <div class="row">
+                                                <div class="col-md">
+                                                    <div id="satFrom" class="timectrl"></div><div class="timectrl-action">
+                                                        <i class="fas fa-minus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md">
+                                                    <div class="timectrl" id="satTo"></div>
+                                                    <div class="timectrl-action">
+                                                        <i data-key="sat" class="fas fa-plus text-success"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-12" data-key="sat"><span class="scheContainer">9:00 AM-5:00 PM <i data-key="tue" class="fas fa-times text-danger"></i></span></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="saveContainer">
+                            <div id="btnSave"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+
+

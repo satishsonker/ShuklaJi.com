@@ -1,0 +1,88 @@
+﻿
+@{
+    ViewData["Title"] = "Email Template";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/js/Area/Admin/EmailManangement/EmailTemplate.js"></script>
+<link href="~/css/Area/Admin/EmailManangement/EmailTemplate.css" rel="stylesheet" />
+<div class="breadcrumb-data-1">
+    <div class="row">
+        <div class="col-md-6 col-5">
+            <div class="breadcrumb-data-3">
+                <h3>Add Email Template</h3>
+            </div>
+        </div>
+        <div class="col-md-6 col-7">
+            <div class="breadcrumb-data-2 d-none d-sm-block">
+                <ul>
+                    <li><p>Home</p></li>
+                    <li><span>/</span></li>
+                    <li><a href="/admin/EmailManagement/ConfigurationDetails">Email Management</a></li>
+                    <li><span>/</span></li>
+                    <li><p>Add Email Template</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data-container">
+    <div class="inner-container">
+        <form id="frmAddEmailTemplate">
+            <div class="form">
+                <div class="row">
+                    <div class="col">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Configuration Name</div>
+                                <div class="dx-field-value">
+                                    <div id="ddlTemplateName"></div>
+                                    <div id="btnAddTemplate"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Email Subject</div>
+                                <div class="dx-field-value">
+                                    <div id="txtSubject"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="html-editor"></div>
+            <div class="small" style="color:red">* Do not remove words enclosed with ##</div>
+            <div class="row">
+                <div class="col" style="text-align: right;margin-top: 30px;">
+                    <div id="btnSaveTemplate"></div>
+                </div>
+            </div>
+        </form>
+        <form id="frmSaveConfigName">
+            <div class="popup-wrapper">
+                <div class="popup">
+                    <div class="close-icon">
+                        <h5 style="float:left">Add Configuration name</h5>
+                        <i title="Close" onclick="hidePopup()" class="la la-times"></i>
+                    </div>
+                    <div class="">
+                        <div class="col">
+                            <div class="dx-fieldset" id="txtConfigNameContainer">
+                               
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="dx-fieldset" style="float:right;margin: 0 20px 16px 20px;">
+                                <div id="btnAddConfigName"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

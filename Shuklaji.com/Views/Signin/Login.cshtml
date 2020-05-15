@@ -1,0 +1,101 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_BlankLayout.cshtml";
+}
+<link href="~/css/Area/Common/Signin/Login.css" rel="stylesheet" />
+<script src="~/js/Area/Common/Signin/Login.js"></script>
+<div class="app-content content">
+    <div class="content-wrapper">
+        <div class="content-body">
+            <section class="flexbox-container page-login-data-1">
+                <div class="d-flex align-items-center justify-content-center">
+                   
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md"></div>
+        <div class="col-md">
+            <div class="box-shadow-2 p-0" style="margin:40px 0;">
+                <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
+                    <div class="card-header border-0 page-login-data-4">
+                        <div class="card-title text-center">
+                            <img src="" id="appLogo" width="200">
+                        </div>
+                        <h6 class="card-subtitle line-on-side text-center pt-2"><span id="appName"></span></h6>
+                    </div>
+                    <div style="padding: 5px 24px;text-align: center;border-bottom: 1px solid #8080808f;">
+                        @{
+                                        string iclass="fab fa-google-plus-g";
+                                        string bColor = "danger";
+                                        if (Model.ExternalLogins.Count > 0)
+                                        {
+                                <form asp-action="ExternalLogin" method="post" asp-route-returnUrl="@Model.ReturnUrl">
+                                    <div>
+
+                                        @foreach (var provider in Model.ExternalLogins)
+                                                    {
+                                                if(provider.DisplayName=="Facebook")
+                                                {
+                                                    iclass = "fab fa-facebook-square";
+                                                 bColor = "primary";
+                                                }
+                                            <button type="submit" class="btn btn-@bColor" title="Login using your @provider.DisplayName" name="provider" value="@provider.Name"><i class="@iclass"></i> @provider.DisplayName</button>
+                                }
+                                    </div>
+                                </form>
+                            }
+                            else
+                            {
+                                <div>No External logn configured</div>
+                            }
+                        }
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body" style="padding:0">
+                            <div class="alert alert-danger login-error"></div>
+                            <form id="frmLogin" class="form-horizontal">
+                                <div class="dx-fieldset">
+                                    <div class="dx-field">
+                                        <div class="dx-field-value">
+                                            <div id="txtUserName"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dx-fieldset">
+                                    <div class="dx-field">
+                                        <div class="dx-field-value">
+                                            <div id="txtPassword"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-7 col-12" style="padding-left:38px">
+                                            <div class="page-login-data-2">
+                                                <a style="font-size: 13px;" href="/signin/forgetpassword">Forgot Password?</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-12" style="padding-right:35px">
+                                            <div class="page-login-data-3">
+                                                <div id="btnLogin"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md">
+           
+        </div>
+    </div>
+
+

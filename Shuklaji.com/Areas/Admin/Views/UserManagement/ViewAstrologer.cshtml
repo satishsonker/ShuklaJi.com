@@ -1,0 +1,118 @@
+﻿@model bool
+@{
+    ViewData["Title"] = "View Astrologer";
+    Layout = Model ? "~/Views/Shared/_AdminLayout.cshtml" : "~/Views/Shared/_webLayout.cshtml";
+}
+<link href="~/css/Area/Admin/UserManagement/Astrologers.css" rel="stylesheet" />
+<script src="~/js/Area/Admin/UserManagement/ViewAstrologers.js"></script>
+<div class="breadcrumb-data-1">
+    <div class="row">
+        <div class="col-md-6 col-5">
+            <div class="breadcrumb-data-3">
+                <h3 _ngcontent-hai-c46="">View Astrologer</h3>
+            </div>
+        </div>
+        <div class="col-md-6 col-7">
+            <div class="breadcrumb-data-2 d-none d-sm-block">
+                @if (Model)
+                {<ul>
+                        <li><p>Home</p></li>
+                        <li><span>/</span></li>
+                        <li><a href="/admin/UserManagement/Astrologers">Astrologers</a></li>
+                        <li><span>/</span></li>
+                        <li><p>View Astrologer</p></li>
+                    </ul>}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row astro-profile-container">
+    <div class="col-lg-3">
+        <div class="profile-left">
+            <img src="" class="astro-profile" />
+            <p class="astro-name"></p>
+            <p title="Price per min for call"><i class="fas fa-rupee-sign"></i> <span class="astro-price"></span></p>
+            <p title="Experts in"><i class="fas fa-graduation-cap"></i> <span class="astro-expert"></span></p>
+            <p title="Rating"><i class="fas fa-star"></i> <span class="astro-rating"></span></p>
+            <p title="Experience"><i class="fas fa-certificate"></i> <span class="astro-exp"></span></p>
+            <table class="table table-bordered text-center astro-misc-data">
+                <tbody>
+                    <tr class="text-center">
+                        <td class="col-md-4 table_right_border">
+                            <span class="astro-language"></span>
+                            <div class="clearfix"></div>
+                            <span><i class="fas fa-language"></i> Language</span>
+                        </td>
+                        <td class="col-md-4 table_right_border">
+                            <span class="astro-review">14</span>
+                            <div class="clearfix"></div>
+                            <span><i class="far fa-grin-stars"></i> Review</span>
+                        </td>
+                        <td class="col-md-4">
+                            <span class="astro-location">14</span>
+                            <div class="clearfix"></div>
+                            <span><i class="fas fa-map-marker-alt"></i> Location</span>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="profile-left-1">
+            <p class="astro-header">Time Availability</p>
+
+            <table class="table table-bordered text-center astro-availability">
+                <tbody>
+                </tbody>
+                @if (Model)
+                {
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">
+                                <button class="btn btn-success btn-sm" onclick="addSchedule()"><i class="fas fa-plus"></i> Add More</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                }
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="profile-right">
+            <div class="section">About <span class="astroname"></span></div>
+            <p class="astro-biography"></p>
+            <div class="section">User Rating &amp; Feedback</div>
+            @if (!Model)
+            {
+                <div class="user-rating-container">
+                    <div class="alert alert-warning" style="padding: 5px;margin: 0px 10px 5px 10px;font-size: 11px;">How was your experience with <span class="astroname"></span>. Please submit your feedback here. </div>
+                    <div class="dx-fieldset">
+                        <div class="dx-field">
+                            <div class="dx-field-value" style="width:100% !important">
+                                <div id="txtfeedback" title="Feedback for astrologer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dx-fieldset">
+                        <div class="dx-field">
+                            <div class="dx-field-value" style="width:100% !important">
+                                <ul class="userStars" data-totalstart="0">
+                                    <li><i class="fas fa-star s1" data-star="1"></i></li>
+                                    <li><i class="fas fa-star s2" data-star="2"></i></li>
+                                    <li><i class="fas fa-star s3" data-star="3"></i></li>
+                                    <li><i class="fas fa-star s4" data-star="4"></i></li>
+                                    <li><i class="fas fa-star s5" data-star="5"></i></li>
+                                </ul>  
+                                <div id="btnSave"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="user-feedback">
+            </div>
+        </div>
+            
+    </div>
+</div>

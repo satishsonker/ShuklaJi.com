@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewData["Title"] = "Email Group";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/js/Area/Admin/EmailManangement/EmailGroup.js"></script>
+<div class="breadcrumb-data-1">
+    <div class="row">
+        <div class="col-md-6 col-5">
+            <div class="breadcrumb-data-3">
+                <h3>Add Email Group</h3>
+            </div>
+        </div>
+        <div class="col-md-6 col-7">
+            <div class="breadcrumb-data-2 d-none d-sm-block">
+                <ul>
+                    <li><p>Home</p></li>
+                    <li><span>/</span></li>
+                    <li><a href="/admin/EmailManagement/ConfigurationDetails">Email Management</a></li>
+                    <li><span>/</span></li>
+                    <li><p>Add Email Group</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data-container">
+    <div class="inner-container">
+        <form id="frmAddEmailTemplate">
+            <div class="form">
+                <div class="section">Email Group <i class="fas fa-question"></i><div class="help-data" data-data="Add emails to intendent group. email will sent to all emails."></div> </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Email Group</div>
+                                <div class="dx-field-value">
+                                    <div id="ddlEmailGroup"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Add Email</div>
+                                <div class="dx-field-value">
+                                    <div id="txtemailAdd"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Email List</div>
+                                <div class="dx-field-value">
+                                    <div id="emailList"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

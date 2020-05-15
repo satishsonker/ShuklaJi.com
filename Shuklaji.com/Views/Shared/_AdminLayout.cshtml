@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Common/AdminLayout.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/19.2.4/js/dx.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.min.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="~/js/Common/Constants.js"></script>
+    <script src="~/js/Common/apiUrls.js"></script>
+    <script src="~/js/Common/Global.js"></script>
+    <script src="~/js/Shared/adminLayout.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/19.2.4/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/19.2.4/css/dx.light.css" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light navbar-bg-white navbar-shadow">
+        <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+            <img src="" alt="Logo" id="appLogo" style="width:40px;">
+            <span id="appName"></span>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" id="headerMenu">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Active</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+
+
+            @**@
+        </div>
+        <div class="dropdown">
+            <i class="la la-bell nav-menu-icon"></i>
+            <span class="profileUserName"></span> <i class="la la-user-circle nav-menu-icon">
+            </i>
+            <i class="la la-caret-down" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </i>
+            <div class="dropdown-menu user-profile" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item disabled" style="height:46px;" href="#"><span class="profileRoleName pmenu"></span><span class="profileLastLogin pmenu"></span></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="/signin/changepassword"><i class="la la-unlock-alt"></i> Change Password</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" id="profileLogout" href="#"><i class="la la-sign-out-alt"></i> Log out</a>
+            </div>
+        </div>
+        <div class="float-right navbar-brand">
+
+        </div>
+
+    </nav>
+    <div class="navbar-left" id="LeftMenu">
+        <div class="left-menu-opener">
+            <i class="las la-hand-point-right"></i>
+        </div>
+        <ul></ul>
+    </div>
+    
+    <div class="body-container">
+        <div class="page-container">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="summary-container" id="summary-container">
+        <div class="summary-container-inner">
+            <div class="summary-header">
+                <h5>Validation Summary</h5>
+                <i class="la la-times" id="iclose" title="Close" data-close="summary-container"></i>
+            </div>
+            <div class="summary-body">
+                <div id="summary">
+                </div>
+            </div>
+            <div class="summary-footer"></div>
+        </div>
+    </div>
+
+    <div class="delete-container" id="delete-container">
+        <div class="delete-container-inner">
+            <div class="delete-header">
+                <h5>Delete Confirmation</h5>
+                <i class="la la-times" id="icloseDelete" title="Close" data-close="delete-container"></i>
+            </div>
+            <div class="delete-body">
+                <ul>
+                    <li><i class="la la-trash"></i> </li>
+                    <li><div id="lblDeletePopupMsg"></div></li>
+                </ul>
+            </div>
+            <div class="delete-footer">
+                <ul>
+                    <li><div id="btnDeletePopupYes"></div></li>
+                    <li><div id="btnDeletePopupNo"></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

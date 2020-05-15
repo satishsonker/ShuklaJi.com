@@ -1,0 +1,246 @@
+﻿
+    <div class="card">
+        <div class="header yellow-bg" style="text-align: center;text-transform: uppercase;">
+            <h3>Ask an expert</h3>
+        </div>
+        <form name="frmask1question" id="frmask1question" action="#" method="post" accept-charset="utf-8">
+            <div class="lead_Form">
+                <p class="expert-quote">Get Accurate Answers to any problems From Expert Astrologers Trained By Bejan Daruwalla Within 48 Hours.</p>
+                <div class="form-group form-group-custom">
+                    <select class="form-control" id="ask-category" name="askCategory">
+                        <option value="Career" data-key="5" data-produtid="4307" data-orginalvalue="100_CAREER">Career</option>
+                        <option value="Marriage" data-key="5" data-produtid="4307" data-orginalvalue="101_MARRIAGE">Marriage</option>
+                        <option value="Finance" data-key="5" data-produtid="4307" data-orginalvalue="102_FINANCE">Finance</option>
+                        <option value="Love" data-key="5" data-produtid="4307" data-orginalvalue="103_LOVE">Love</option>
+                        <option value="Children" data-key="5" data-produtid="4307" data-orginalvalue="104_CHILDREN">Children</option>
+                        <option value="Business" data-key="5" data-produtid="4307" data-orginalvalue="105_BUSINESS">Business</option>
+                        <option value="Education" data-key="5" data-produtid="4307" data-orginalvalue="106_EDUCATION">Education</option>
+                        <option value="Travel" data-key="5" data-produtid="4307" data-orginalvalue="107_TRAVEL">Travel</option>
+                        <option value="Health" data-key="5" data-produtid="4307" data-orginalvalue="108_HEALTH">Health</option>
+                        <option value="Legal" data-key="5" data-produtid="4307" data-orginalvalue="109_LEGAL">Legal</option>
+                        <option value="General" data-key="5" data-produtid="4307" data-orginalvalue="110_GENERAL">General</option>
+                    </select>
+                </div>
+
+                <div class="form-group-custom form-group">
+                    <select class="form-control" id="ask-subcategory" name="askQuestionselect">
+
+                        <option value="Other" data-produtid="4307">Other</option>
+                    </select>
+                    </div>
+                    <div class="form-group form-group-custom">
+                        <label id="label-selected">Selected Question</label>
+
+                        <textarea id="box_question"  name="askQuestion" cols="40" rows="3" maxlength="300" class="form-control">I am facing continuous struggles in my career. When will I get lasting relief?</textarea>
+                        <div style="width: 100%;float: left;" class="text-validation">
+                            <p style="float:left; margin-bottom:0px;" class="nrmltxtque minlength">Min 25 Characters</p>
+                            <p style="float:right; margin-bottom:0px;" class="nrmltxtqwe maxaskquestionlengthque">0/300</p>
+                        </div>
+                    </div>
+                    <div class="other-question" id="OtherQuestion" style="display: none;">
+                        <label style="display: inline;color: #e3992b;font-size: 13px;margin-bottom: 10px !important;" class="active">Type Your Question</label>
+                        <textarea id="box_question_other" name="askQuestion" placeholder="Write Your One Specific Question" cols="40" rows="4" maxlength="300" class="data-edits"></textarea>
+                        <div style="width: 100%;float: left;" class="text-validation">
+                            <p style="float:left; margin-bottom:0px;" class="nrmltxt minlength">Min 25 Characters</p>
+                            <p style="float:right; margin-bottom:0px;" class="nrmltxt maxaskquestionlength">0/300</p>
+                            <p></p>
+                        </div>
+                    </div>
+
+                <div class="price-section">
+                    <div id="price_block_data">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-bottom-0">
+                <div class="col l12 s12 center-align">
+                    <button class="btn-yellow btn btn-sm">Ask Now</button>
+                    <p class="ask_tagline">*Personal details will be asked after successful payment.</p>
+                </div>
+
+            </div>
+        </form>
+    </div>
+<script>
+    $(document).ready(function () {
+        api.get(app.api.urls.misc.refLookupList + `?key=AskQuesCategory`).then(function (data) {
+            var $cat = $('#ask-category'), $lst = '';
+
+            $($cat).empty();
+            $(data.data).each(function (ind, ele) {
+                $lst += `<option value="${ele.value}">${ele.value}</option>`;
+            });
+            $($cat).append($lst);
+        });
+    });
+
+    $(document).on('keypress keyup keydown', '#box_question', function () {
+        var $parentCtrl = $(this).siblings('.text-validation'), $txtLength = $(this).val().length;
+        $($parentCtrl).find('.maxaskquestionlengthque').text(`${$txtLength}/300`);
+        if ($txtLength < 25) {
+            $($parentCtrl).find('.minlength').addClass('text-danger').removeClass('text-success');
+        }
+        else {
+            $($parentCtrl).find('.minlength').addClass('text-success').removeClass('text-danger');
+        }
+    });
+</script>
+
+<style>
+    .ask_tagline {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+
+    .center-align {
+        text-align: center;
+    }
+
+    .card .header {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+        .card .header h3 {
+            font-size: 1.0em;
+            padding-top: 6px;
+            color: white;
+            font-weight: 700;
+        }
+
+    .expert-quote {
+        text-align: justify;
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+
+    .form-group-custom {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 9px;
+    }
+
+    .text-validation {
+        font-size: 10px;
+    }
+
+    .form-group-custom label, .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group-custom label {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+
+    .card {
+        margin-top: 20px;
+    }
+</style>
+
+<style>
+    /* ============================================================================================== 
+SED Innovations
+https://sed.am
+https://mkrtchyan.ga
+================================================================================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color:rgba(33, 33, 33, 0.9);
+    color:#ffffff;
+    display:block;
+    font: 14px/1.3 Arial,sans-serif;
+    height:50px;
+    position:relative;
+    z-index:5;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+header h2{
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+header a, a:visited {
+    text-decoration:none;
+    color:#fcfcfc;
+}
+
+@@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
+</style>

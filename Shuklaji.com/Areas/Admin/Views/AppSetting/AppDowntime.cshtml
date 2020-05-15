@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewData["Title"] = "AppDowntime";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="~/js/Area/Admin/AppSetting/AppDowntime.js"></script>
+<link href="~/css/Area/Admin/AppSetting/Downtime.css" rel="stylesheet" />
+<div class="breadcrumb-data-1">
+    <div class="row">
+        <div class="col-md-6 col-5">
+            <div class="breadcrumb-data-3">
+                <h3 _ngcontent-hai-c46="">Downtime List</h3>
+            </div>
+        </div>
+        <div class="col-md-6 col-7">
+            <div class="breadcrumb-data-2 d-none d-sm-block">
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><span>/</span></li>
+                    <li><a>App Setting</a></li>
+                    <li><span>/</span></li>
+                    <li><a>Downtime List</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data-container">
+    <div class="inner-container">
+        <form id="frmAddDowntime" class="scroll-form">
+            <div id="gridContainer"></div>
+        </form>
+    </div>
+</div>
+
+<div class="model-form">
+    <div class="form-container">
+        <div class="header">
+            <span class="form-title">Add Application Downtime</span>
+            <span class="form-close"><i class="fas fa-times text-danger"></i></span>
+        </div>
+        <div class="form-body">
+            <form id="frmAddDowntime" data-id="0">
+                <div class="form">
+                    <div class="offset-md-2 offset-sm-1 offset-lg-2 col-lg-8 col-md-8 col-sm-10">
+                        <div class="custom-form">
+                            <div class="dx-fieldset">
+                                <div class="dx-field">
+                                    <div class="dx-field-label">Downtime From <i class="fas fa-question"></i><div class="help-data">Application will be down From this date and time &amp; user will not able to use </div></div>
+                                    <div class="dx-field-value">
+                                        <div id="txtFromTime"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-fieldset">
+                                <div class="dx-field">
+                                    <div class="dx-field-label">Downtime To<i class="fas fa-question"></i><div class="help-data">Application will be down To this date and time &amp; user will not able to use </div></div>
+                                    <div class="dx-field-value">
+                                        <div id="txtToTime"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-fieldset">
+                                <div class="dx-field">
+                                    <div class="dx-field-label">Message</div>
+                                    <div class="dx-field-value">
+                                        <div id="txtMessage"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dx-fieldset">
+                                <div class="dx-field">
+                                    <div class="dx-field-label"></div>
+                                    <div class="dx-field-value">
+                                        <div id="btnSave"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

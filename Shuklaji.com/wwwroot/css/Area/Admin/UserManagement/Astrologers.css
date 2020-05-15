@@ -1,0 +1,301 @@
+﻿.astro-profile-container
+{
+    background-color:white;
+}
+
+.profile-left, .profile-left-1 {
+    width: 100%;
+    border: 1px solid #80808069;
+    margin: 5px;
+    text-align: center;
+    margin-top: 100px;
+    color: gray;
+}
+
+.profile-left-1 {
+    margin-top: 10px;
+    padding: 0 10px 10px 10px;
+}
+
+.profile-left > p {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom:0px;
+    text-align:left;
+}
+    .profile-right {
+        width: 100%;
+        border: 0px solid #80808069;
+        padding: 10px;
+        margin: 5px;
+        text-align: center;
+        height: 86%;
+    }
+.profile-left > .astro-profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    margin-top: -76px;
+}
+.astro-misc-data {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+    .astro-misc-data > tbody > tr > td {
+        padding: 2px;
+        width: auto;
+    }
+
+.profile-left-1 > table > tbody > tr > td {
+    padding: 2px;
+    width: auto;
+}
+.astro-rating, .astro-exp, .astro-price {
+    margin-bottom: 0px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.astro-expert {
+    margin-bottom: 0px;
+    font-size: 12px;
+    text-align: left;
+}
+.astro-name {
+    margin-bottom: 0px;
+    font-size: 22px;
+    text-align: left;
+}
+
+.astro-language
+{
+
+}
+.astro-review {
+}
+
+.astro-location {
+}
+
+
+.astro-biography {
+    text-align: justify;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #80808040;
+}
+
+.user-image {
+    border: 1px solid #80808040;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background: blueviolet;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    padding: 0;
+}
+
+.user-name {
+    font-size: 10px;
+}
+
+.user-data {
+    text-align: left;
+    padding: 11px;
+}
+
+    .user-data > div>.user-star > i.fas.fa-star {
+        font-size: 10px;
+    }
+
+.user-comments
+{
+    text-align:justify;
+}
+
+.fa-language
+{
+    color:forestgreen;
+}
+.fa-grin-stars, .fa-star {
+    color: #fc0;
+}
+
+.fa-map-marker-alt
+{
+    color:orangered;
+}
+
+.astro-header {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.astro-availability
+{
+    margin-bottom:0px;
+}
+.userReview {
+    text-align: justify;
+    font-size: 13px;
+    color: gray;
+    overflow-x:auto;
+}
+
+.userReview-container {
+    border: 1px solid #80808030;
+    margin-bottom: 6px;
+    padding: 10px;
+    border-radius: 6px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.review-date {
+    font-size: 12px;
+    color: gray;
+}
+
+.schedule-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .schedule-list > li {
+        border-bottom: 1px solid #80808085;
+        /*height: 50px;*/
+        padding: 10px;
+    }
+
+        .schedule-list > li > .li-left {
+            float: left;
+        }
+
+        .schedule-list > li > .li-right {
+            float: right;
+            width: 40%;
+        }
+
+.schedule-list>li>table{
+    width:100%;
+}
+
+.time
+{
+    text-align:right;
+}
+
+.chk {
+    width: 20px;
+    height: 20px;
+    margin: 6px 10px 0 0;
+    line-height: 7px;
+}
+
+.ckLbl {
+    height: 34px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    line-height: 1.25rem;
+}
+
+.ddl {
+    width: 40%;
+    border-style: none;
+    border-bottom: 1px solid #808080a3;
+    margin: 15px;
+    outline: none;
+    padding: 0 10px;
+}
+
+.edit-time
+{
+    display:none;
+}
+
+.showtime
+{
+    display:none;
+}
+
+.timectrl
+{
+    width:100%;
+}
+
+.timectrl-action > i {
+    padding: 2px;
+    margin-top: 7px;
+}
+.timectrl-action {
+    float: right;
+    display: inline-block;
+    margin: -34px -24px;
+}
+
+.scheContainer {
+    display: inherit;
+    float: right;
+    padding: 2px;
+}
+
+    .scheContainer > i {
+        padding-left: 8px;
+        cursor: pointer;
+    }
+.saveContainer {
+    margin-top: 10px;
+    float: right;
+}
+
+.userStars {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+    .userStars > li {
+        float: left;
+        padding: 10px;
+        font-size: 15px;
+    }
+    .userStars > li>i {
+        color:gray ;
+    }
+        .userStars > li > i:hover {
+            color: #fc0;
+        }
+
+.starColor {
+    color: #fc0 !important;
+}
+
+.user-rating-container {
+    display: none;
+    border: 1px solid #80808030;
+    border-radius: 7px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .user-image
+    {
+        float:left;
+    }
+    .user-name
+    {
+        padding-left:50px;
+    }
+    .user-star
+    {
+        margin-left:50px;
+    }
+}

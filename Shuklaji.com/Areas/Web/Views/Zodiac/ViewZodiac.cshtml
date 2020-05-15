@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewData["Title"] = "View Zodiac";
+    Layout = "~/Views/Shared/_WebLayout.cshtml";
+}
+@{
+    DateTime requestDate = DateTime.Now;
+    Microsoft.Extensions.Primitives.StringValues queryDateStr;
+    DateTime queryDate = DateTime.Now;
+    Microsoft.Extensions.Primitives.StringValues reporttype;
+    Microsoft.Extensions.Primitives.StringValues id;
+    Microsoft.Extensions.Primitives.StringValues name;
+    if (!Context.Request.Query.TryGetValue("date", out queryDateStr))
+    {
+        DateTime.TryParse(queryDateStr.FirstOrDefault(), out queryDate);
+    }
+    if (!Context.Request.Query.TryGetValue("name", out name))
+    {
+
+    }
+    if (!Context.Request.Query.TryGetValue("reporttype", out reporttype))
+    {
+
+    }
+    if (!Context.Request.Query.TryGetValue("id", out id))
+    {
+
+    }
+}
+<script src="~/js/Web/Zodiac/viewZodiac.js"></script>
+<link href="~/css/Web/zodiac/viewZodiac.css" rel="stylesheet" />
+<div class="stars"></div>
+<div class="twinkling"></div>
+<div class="clouds"></div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12 banner-container" style="margin:10px 0;">
+                <div class="banner">
+                    <h1></h1>
+                </div>
+            </div>
+            <div class="col-md-8  margin-top-20">
+                <div class="margin-bottom-xs-0 margin-top-15">
+                    <div class="single-sign-daily-icon">
+                        <div class="compatibility-container sign-icon-width margin-bottom-0"> <i class="compatibility-img"> <img class="lazy no-border logo" src="" alt="@name @reporttype Horoscope" title="@name @reporttype Horoscope"> </i> </div>
+                    </div>
+                    <div class="single-sign-right">
+                        <div class="daily-horoscope-content">
+                            <!-- <h2 class="truncate-line"> Aries Daily Horoscope </h2> -->
+                            <h2 class="truncate-line" id="truncate-line">@name Today </h2>
+
+                            <p class="orrange-text margin-bottom-0 margin-top-5 truncate-line">@queryDate.ToShortDateString()</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="description  margin-top-20"></div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-6 padding-left-22 margin-top-20">
+                        <a class="btn-sm btn-yellow waves-effect waves-light">Subscribe</a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-6 margin-top-20">
+                        <div class="socialicon">
+
+                            <!--a class="social-box-svg social-googleplus" href="javascript:;" onclick="shareOnGooglePlus();" style="margin-left:5px;"> <img class="lazy no-border" src="//images.ganeshaspeaks.com/images_gsv7/icons/g-plus-icon.png" alt=""> </a--> <a style="margin-left:5px;" class="social-box-svg social-facebook" href="javascript:;" onclick="shareOnFacebook();"> <img class="lazy no-border" src="//images.ganeshaspeaks.com/images_gsv7/icons/facebook-icon.png" alt=""> </a> <a class="social-box-svg social-twitter" style="margin-left:5px;" href="javascript:;" onclick="shareOnTwitter();"> <img class="lazy no-border" src="//images.ganeshaspeaks.com/images_gsv7/icons/twitter-icon.png" alt=""> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 margin-top-20">
+                <div class="form-group">
+                    <label>Select Another Sign</label>
+                    <select class="form-control chooseZodiac"></select>
+                </div>
+                <div class="hr"><span class="text-gray">More </span><span class="text-yellow">Horoscopes</span></div>
+                <ul class="horoscope-list">
+                    <li>
+                        <a href="/web/zodiac/viewzodiac?reporttype=@reporttype.FirstOrDefault()&date=@requestDate.AddDays(1).ToShortDateString()&id=@id.FirstOrDefault()" title="@name Horoscope - Tomorrow">TOMORROW</a>
+                    </li>
+                    <li>
+                        <a href="/web/zodiac/viewzodiac?reporttype=@reporttype.FirstOrDefault()&date=@requestDate.AddDays(-1).ToShortDateString()&id=@id.FirstOrDefault()" title="@name  Horoscope - Yesterday">YESTERDAY</a>
+                    </li>
+
+                    <li>
+                        <a href="/web/zodiac/viewzodiac?reporttype=@reporttype.FirstOrDefault()&date=@requestDate.ToShortDateString()&id=@id.FirstOrDefault()" title="@name  Horoscope - Today">TODAY</a>
+                    </li>
+                    <li>
+                        <a href="/web/zodiac/viewzodiac?reporttype=weekly&date=@requestDate.ToShortDateString()&id=@id.FirstOrDefault()" title="@name Weekly Horoscope">THIS WEEK</a>
+                    </li>
+                    <li>
+                        <a href="/web/zodiac/viewzodiac?reporttype=monthly&date=@requestDate.ToShortDateString()&id=@id.FirstOrDefault()" title="@name Monthly Horoscope">THIS MONTH</a>
+                    </li>
+                    <li>
+                        <a href="/web/zodiac/viewzodiac?reporttype=yearly&date=@requestDate.ToShortDateString()&id=@id.FirstOrDefault()" title="@name Yearly Horoscope">THIS YEAR</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-12">
+                @Html.Partial("_askExperts")
+                <partial name="_AskExperts"></partial>
+            </div>
+        </div>
+    </div>
+</div>
+

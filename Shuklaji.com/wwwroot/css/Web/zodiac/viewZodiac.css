@@ -1,0 +1,132 @@
+﻿.banner-container
+{
+    margin:10px 0;
+}
+
+    .banner-container .banner {
+        width: 100%;
+        background: url(../../../image/banner/single-sign-img1.jpg) no-repeat;
+        width: 100%;
+        background-size: 100% 100%;
+        border-top: #3eabbb solid 1px;
+        margin-top: 0;
+        position: relative;
+        height:90px;
+    }
+
+        .banner-container .banner h1 {
+            font-size: 2.1em;
+            color: #fff;
+            font-family: 'Roboto Condensed',sans-serif;
+            font-weight: 300;
+            margin: 0 3%;
+            padding: 17px 0;
+        }
+.horoscope-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .horoscope-list li {
+        border-bottom: 1px solid #80808061;
+        text-align: left;
+        padding: 5px 10px;
+    }
+
+.horoscope-list li a{
+    text-decoration:none;
+}
+
+.compatibility-container {
+    border: 1px solid gray;
+    border-radius: 100px;
+    padding: 18px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.single-sign-daily-icon {
+    width: 136px;
+    float: left;
+    margin-right: 20px;
+}
+
+.daily-horoscope-content
+{
+    padding:32px;
+}
+
+.daily-horoscope-content h2 {
+    font-size: 24px;
+    color: #3a3a3a;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+.truncate-line, .truncate-line-xsm {
+    white-space: nowrap;
+    display: block !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.margin-top-5 {
+    margin-top: 5px;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
+}
+.orrange-text {
+    color: #e3992b !important;
+}
+.description {
+    margin: 10px;
+    text-align: justify;
+}
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+    transition: .3s ease-out;
+}
+.margin-top-20 {
+    margin-top: 20px !important;
+}
+.padding-left-22 {
+    padding-left: 22px !important;
+}
+
+@media only screen and (min-width: 993px) {
+    .row .col.l8 {
+        width: 66.6666666667%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+}
+.socialicon {
+    height: 27px;
+    display: block;
+}
+.btn-yellow {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffc107;
+text-align: center;
+    transition: .2s ease-out;
+    font-weight: bold;
+    cursor: pointer;
+}

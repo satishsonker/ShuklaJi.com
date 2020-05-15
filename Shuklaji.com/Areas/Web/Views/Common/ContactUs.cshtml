@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewData["Title"] = "Contact Us";
+    //Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Views/Shared/_WebLayout.cshtml";
+}
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="~/js/Web/ContactUs.js"></script>
+<link href="~/css/Web/ContactUs.css" rel="stylesheet" />
+<script src="https://www.google.com/recaptcha/api.js?render=6LcShtkUAAAAAApVHQ5BpvkJZFBP0lWtTn2POLhI"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LcShtkUAAAAAApVHQ5BpvkJZFBP0lWtTn2POLhI', { action: 'homepage' }).then(function (token) {
+            console.log(token);
+        });
+    });
+</script>
+<div class="breadcrumb-data-1">
+    <div class="row">
+        <div class="col-md-6 col-5">
+            <div class="breadcrumb-data-3">
+                <h3>Contact Us</h3>
+            </div>
+        </div>
+        <div class="col-md-6 col-7">
+            <div class="breadcrumb-data-2 d-none d-sm-block">
+                <ul>
+                    <li><a href="/dashboard/index">Home</a></li>
+                    <li><span>/</span></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data-container">
+    <div class="inner-container">
+        <form id="frmSendQuery" action="?" method="POST">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d900.8530142157672!2d81.91059062915548!3d25.424483998986943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39854b8096d56963%3A0x5b332e5b16e2f7b6!2sBhaskar%20Jyotishya%20Kendra!5e0!3m2!1sen!2sin!4v1580199959525!5m2!1sen!2sin" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div class="container">               
+                <div class="row">
+                    <div class="col-md">
+                        <div class="fieldset contactTitle section">Contact Form</div>
+                        <div class="custom-form" style="padding-top:20px;">
+                            <img style="float: left;padding: 13px;" src="~/icons/iconfinder_Cancel_27836.png" />
+                            <p id="contactDescription" style="text-align:justify;"></p>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="section">Quick Contact</div>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="custom-form">
+                                    <div class="dx-fieldset">
+                                        <div class="dx-field pad-l-0">
+                                            <div class="dx-field-label">Name</div>
+                                            <div class="dx-field-value width-100">
+                                                <div id="txtName"></div>
+                                            </div>
+                                        </div>
+                                        <div class="dx-field pad-l-0">
+                                            <div class="dx-field-label">Mobile</div>
+                                            <div class="dx-field-value width-100">
+                                                <div id="txtMobile"></div>
+                                            </div>
+                                        </div>
+                                        <div class="dx-field pad-l-0">
+                                            <div class="dx-field-label">Email</div>
+                                            <div class="dx-field-value width-100">
+                                                <div id="txtEmail"></div>
+                                            </div>
+                                        </div>
+                                        <div class="dx-field pad-l-0">
+                                            <div class="dx-field-label">Query</div>
+                                            <div class="dx-field-value width-100">
+                                                <div id="txtComments"></div>
+                                            </div>
+                                        </div>
+                                        <div class="dx-field pad-l-0">
+                                            <div class="g-recaptcha" data-sitekey="6LcShtkUAAAAAApVHQ5BpvkJZFBP0lWtTn2POLhI"></div>
+                                            <div class="dx-field-value width-100">
+                                                <div id="btnSubmitQuery"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section">Address</div>
+                        <div class="row">
+                            <div class="col-md addressBox">
+                                <ul>
+                                    <li><i class="la la-home"></i><span class="address"></span></li>
+                                    <li><i class="la la-at"></i><a href="" target="_top"><span class="email"></span></a></li>
+                                    <li><i class="la la-phone-alt"></i><span class="mobile"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="section">Social Sharing</div>
+                        <div class="row">
+                            <div class="col-md socialShare">
+                                <ul>
+                                    <li class="instagramLink"><a href=""><img src="~/icons/iconfinder_1_Instagram_colored_svg_1_5296765.png" /></a></li>
+                                    <li class="youtubeLink"> <a href=""><img src="~/icons/iconfinder_1_Youtube_colored_svg_5296521.png" /></a></li>
+                                    <li class="facebookLink"><a href=""><img src="~/icons/iconfinder_Colored_Facebook3_svg_5365678.png" /></a></li>
+                                    <li class="googleLink"><a href=""><img src="~/icons/iconfinder_search_4975303.png" /></a></li>
+                                    <li class="twitterLink"><a href=""><img src="~/icons/twitter.png" /></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-moto col-lg-12 col-md-12 col-sm-12 pad-l-0 pad-r-0 mar-top">
+                <ul>
+                    <li><img src="~/icons/Happy-Customer.png" alt="Hundreds of Happy customers" /><p>Hundreds of Happy customers</p></li>
+                    <li><img src="~/icons/safety-shield.png" alt="Safe and Secure" /><p>Safe and Secure</p></li>
+                    <li><img src="~/icons/1891014-128.png" alt="Privacy Guaranteed" /><p>Privacy Guaranteed</p></li>
+                    <li><img src="~/icons/Solution.png" alt="Effective Solution" /><p>Effective Solution</p></li>
+                    <li><img src="~/icons/Worldwide.png" alt="Users from worldwide" /><p>Users from worldwide</p></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</div>

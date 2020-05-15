@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewData["Title"] = "Email Configuration";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<link href="~/css/Area/Admin/EmailManangement/EmailConfiguration.css" rel="stylesheet" />
+<script src="~/js/Area/Admin/EmailManangement/EmailConfiguration.js"></script>
+<div class="breadcrumb-data-1">
+    <div class="row">
+        <div class="col-md-6 col-5">
+            <div class="breadcrumb-data-3">
+                <h3>Add Email Configuration</h3>
+            </div>
+        </div>
+        <div class="col-md-6 col-7">
+            <div class="breadcrumb-data-2 d-none d-sm-block">
+                <ul>
+                    <li><p>Home</p></li>
+                    <li><span>/</span></li>
+                    <li><a href="/admin/EmailManagement/ConfigurationDetails">Email Management</a></li>
+                    <li><span>/</span></li>
+                    <li><p>Add Configuration</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="data-container">
+    <div class="inner-container">
+        <form id="frmAddEmailConfig">
+            <div class="form">
+                <div class="section">Email Configuration</div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Configuration Name</div>
+                                <div class="dx-field-value">
+                                    <div id="txtConfigName"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Server Name</div>
+                                <div class="dx-field-value">
+                                    <div id="txtServerName"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Port Number</div>
+                                <div class="dx-field-value">
+                                    <div id="numPortNumber"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Username</div>
+                                <div class="dx-field-value">
+                                    <div id="txtUsername"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label">Password</div>
+                                <div class="dx-field-value">
+                                    <div id="txtPassword"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md"></div>
+                    <div class="col-md">
+                        <div class="dx-fieldset">
+                            <div class="dx-field">
+                                <div class="dx-field-label"></div>
+                                <div class="dx-field-value">
+                                    <div id="btnSave"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -1,0 +1,35 @@
+﻿.rgt-0{
+    right:0 !important;
+}
+
+.popup {
+    border: 1px solid #c6c6c6;
+    position: fixed;
+    top: 25%;
+    left: 30%;
+    width: 40%;
+    min-height: 30%;
+    border-radius: 4px;
+    box-shadow: 0px 0px 1px grey;
+    background-color: white;
+}
+
+    .popup > .close-icon {
+        text-align: right;
+        padding: 6px 13px 6px 16px;
+        border-bottom: 1px solid #80808061;
+    }
+    .popup > .close-icon>i:hover {
+        color:red
+    }
+
+.popup-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #8080806b;
+    z-index: 1000000000 !important;
+    display:none;
+}
